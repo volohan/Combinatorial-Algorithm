@@ -6,8 +6,6 @@ with open('task_2_tests\\2.txt', 'r') as graph:
         vertex = list(map(lambda x: int(x) - 1,
                           graph.readline().split(' ')[:-1]))
         adjacency_list.append(vertex)
-    graph.readline()
-    print(graph.readline())
 
 res = ('A', None)
 all_visited = set()
@@ -33,6 +31,7 @@ for j in range(N):
         if res[0] == 'N':
             break
 
-print(res[0])
-if res[1]:
-    print(sorted(map(lambda x: x + 1, res[1])))
+with open('out.txt', 'w') as file:
+    file.write(res[0])
+    if res[1]:
+        file.write('\n' + str(sorted(map(lambda x: x + 1, res[1]))))
