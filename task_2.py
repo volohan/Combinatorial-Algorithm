@@ -1,6 +1,6 @@
 adjacency_list = []
 
-with open('task_2_tests\\2.txt', 'r') as graph:
+with open('in.txt', 'r') as graph:
     N = int(graph.readline())
     for _ in range(N):
         vertex = list(map(lambda x: int(x) - 1,
